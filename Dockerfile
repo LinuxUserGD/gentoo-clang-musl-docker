@@ -3,7 +3,7 @@ FROM gentoo/stage3:amd64-musl
 COPY ./files/package.use.force ./files/repos.conf ./files/repos2.conf ./
 
 ARG MAKEOPTS="" \
-    LLVM_VERSION="llvm-14" \
+    LLVM_VERSION="llvm-15" \
     ACCEPT_KEYWORDS="~amd64" \
     CMAKE_MAKEFILE_GENERATOR="ninja" \
     EMERGE_DEFAULT_OPTS="--verbose --quiet-build=y" \
