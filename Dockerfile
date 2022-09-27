@@ -12,7 +12,7 @@ ARG MAKEOPTS="-j4 -l 4.0" \
 RUN mkdir -p /etc/portage/repos.conf /etc/portage/env /etc/portage/profile \
  && mv ./repos.conf /etc/portage/repos.conf/gentoo.conf \
  && emerge-webrsync \
- && emerge --deselect dev-lang/perl
+ && emerge --deselect dev-lang/perl \
  && emerge dev-lang/perl app-eselect/eselect-repository dev-vcs/git --backtrack=1000000 \
  && eselect repository enable musl \
  && eselect repository add clang-musl git \
