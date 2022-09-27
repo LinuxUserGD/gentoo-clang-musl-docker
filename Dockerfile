@@ -2,7 +2,7 @@ FROM gentoo/stage3:amd64-musl
 
 COPY ./files/package.use.force ./files/repos.conf ./files/repos2.conf ./
 
-ARG MAKEOPTS="" \
+ARG MAKEOPTS="-j4 -l 4.0" \
     LLVM_VERSION="llvm-15" \
     ACCEPT_KEYWORDS="~amd64" \
     CMAKE_MAKEFILE_GENERATOR="ninja" \
